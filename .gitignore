@@ -1,0 +1,7 @@
+# IDE and System Files
+.agents/
+.autoclaw/
+.cluster/
+.opencode/
+.DS_Store
+Thumbs.db

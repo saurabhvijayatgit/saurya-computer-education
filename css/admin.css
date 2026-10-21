@@ -1,0 +1,387 @@
+/* ============================================================
+   SAURYA COMPUTER EDUCATION - ADMIN & TEACHER PANEL STYLES
+   Institutional Control Environment, Metrics, Admissions Queue,
+   Academic Records, Grading & Command Terminal
+============================================================ */
+
+.admin-wrapper {
+  padding: 30px 0 60px;
+}
+
+/* Admin Top Bar */
+.admin-header-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--gov-navy);
+  border-radius: var(--radius-xs);
+  padding: 14px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.admin-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--gov-navy);
+  object-fit: cover;
+}
+
+/* Admin Navigation Tabs */
+.admin-tabs-nav {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 6px;
+  border-radius: var(--radius-xs);
+}
+
+.admin-tab-btn {
+  padding: 8px 14px;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+}
+
+.admin-tab-btn:hover {
+  background: var(--bg-alt);
+  color: var(--gov-navy);
+}
+
+.admin-tab-btn.active {
+  background: var(--gov-navy);
+  color: #ffffff;
+  border-color: #002244;
+}
+
+.tab-counter-badge {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-size: 0.7rem;
+}
+
+.admin-tab-btn:not(.active) .tab-counter-badge {
+  background: var(--bg-alt);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* Admin Tab Content Panes */
+.admin-pane {
+  display: none;
+}
+
+.admin-pane.active {
+  display: block;
+}
+
+/* KPI Metrics Row */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.kpi-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--gov-navy);
+  border-radius: var(--radius-xs);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.kpi-val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 4px 0;
+  color: var(--gov-navy);
+  font-family: var(--font-mono);
+}
+
+.kpi-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Data Tables */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.data-table th {
+  background: var(--gov-navy);
+  color: #ffffff;
+  padding: 10px 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  border: 1px solid #002244;
+}
+
+[data-theme="dark"] .data-table th {
+  background: #162035;
+  color: #38bdf8 !important;
+  border-color: #273754;
+}
+
+.data-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+[data-theme="dark"] .data-table td {
+  color: #f8fafc;
+  border-color: #1e2b42;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: var(--bg-alt);
+}
+
+.data-table tr:hover td {
+  background: var(--gov-blue-subtle);
+}
+
+[data-theme="dark"] .data-table tr:hover td {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* Table Controls Toolbar */
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.table-search-input {
+  max-width: 320px;
+}
+
+/* Question Builder in Exam Creator */
+.builder-question-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--gov-navy);
+  border-radius: var(--radius-xs);
+  padding: 18px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.builder-remove-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: var(--accent-rose);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Descriptive Grading Card */
+.grading-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--gov-navy);
+  border-radius: var(--radius-xs);
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.student-submitted-box {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  padding: 14px;
+  margin: 12px 0;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  font-family: var(--font-mono);
+}
+
+/* Attendance Checkbox List */
+.attendance-table-wrap {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  padding: 18px;
+}
+
+.attendance-radio-group {
+  display: flex;
+  gap: 12px;
+}
+
+.attendance-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* SECTION 7 TERMINAL (SECURE ALLOWLISTED CONSOLE) */
+.terminal-window {
+  background: #08111d;
+  border: 1px solid #1a2a42;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-top: 14px;
+}
+
+.terminal-header {
+  background: #0f1c2e;
+  border-bottom: 1px solid #1a2a42;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: #94a3b8;
+}
+
+.terminal-body {
+  padding: 16px;
+  min-height: 280px;
+  max-height: 440px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #38bdf8;
+  line-height: 1.6;
+}
+
+.terminal-prompt-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #0b1524;
+  border-top: 1px solid #1a2a42;
+}
+
+.terminal-prompt-label {
+  color: #34d399;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: bold;
+}
+
+.terminal-input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+/* ============================================================
+   STAFF & FACULTY CONSOLE DARK MODE OVERRIDES
+============================================================ */
+[data-theme="dark"] .admin-tab-btn {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .admin-tab-btn:hover {
+  background: #1e2b42;
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .admin-tab-btn.active {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+[data-theme="dark"] .admin-header-strip {
+  background: #111a2e;
+  border-color: #273754;
+  border-top-color: #38bdf8;
+}
+
+[data-theme="dark"] .admin-tabs-nav {
+  background: #111a2e;
+  border-color: #273754;
+}
+
+[data-theme="dark"] .builder-question-card,
+[data-theme="dark"] .grading-card,
+[data-theme="dark"] .attendance-table-wrap {
+  background: #141f36;
+  border-color: #273754;
+  border-top-color: #38bdf8;
+  border-left-color: #38bdf8;
+}
+
+[data-theme="dark"] .student-submitted-box {
+  background: #090e17;
+  border-color: #273754;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .attendance-radio-item {
+  color: #f8fafc;
+}
+

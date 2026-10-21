@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurya Computer Education | Authorised Study Centre of RGCSM • Khair, Aligarh (U.P.)</title>
+  <meta name="description" content="Saurya Computer Education in Khair, Aligarh is an authorised franchise of Rajeev Gandhi Computer Saksharta Mission (RGCSM). ISO 9001:2015 certified. Government-recognized DOAP, DCA, ADCA, DCAA, PGDCA, Tally Prime with GST, Python, and CCC courses with free kit bags, dual-screen labs, and on-demand examinations.">
+  <meta name="keywords" content="Saurya Computer Education, RGCSM Khair, Rajeev Gandhi Computer Saksharta Mission, DOAP R20111, DCA R10104, ADCA R20118, DCAA R10203, PGDCA R30105, RG-CIT R10108, Khair Aligarh computer institute, Central Bank Khair, KIC Khair, Tally Prime GST Khair">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Core & Component Stylesheets -->
+  <link rel="stylesheet" href="css/main.css?v=5.0">
+  <link rel="stylesheet" href="css/mascot.css?v=5.0">
+  <link rel="stylesheet" href="css/portal.css?v=5.0">
+  <link rel="stylesheet" href="css/admin.css?v=5.0">
+
+  <!-- Official Institutional Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-icon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+</head>
+<body>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Modern Scroll Progress Indicator (Top-anchored) -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- ============================================================
+       1. TOP GOVERNMENT & ACCREDITATION UTILITY STRIP
+  ============================================================ -->
+  <div class="gov-utility-bar">
+    <div class="container gov-utility-container">
+      <div class="utility-left">
+        <div class="utility-item">
+          <span>Helplines:</span>
+          <strong><a href="tel:9927292060">+91 99272 92060</a> / <a href="tel:9084767670">+91 90847 67670</a></strong>
+        </div>
+        <div class="utility-item">
+          <span>Enquiry:</span>
+          <a href="mailto:Enquiry@sauryacomputer.com">Enquiry@sauryacomputer.com</a>
+        </div>
+        <div class="utility-item">
+          <span>Official:</span>
+          <a href="mailto:Official.sauryacomputer@gmail.com">Official.sauryacomputer@gmail.com</a>
+        </div>
+        <div class="utility-item" style="color: #f59e0b;">
+          <span>• Center Code: UP-438 (Khair, Aligarh)</span>
+        </div>
+        <div class="utility-item">
+          <span class="google-review-badge">★ 4.7 <span style="font-weight: 500;">(63+ Google Reviews)</span></span>
+        </div>
+      </div>
+
+      <div class="utility-right">
+        <button class="access-tool" onclick="alert('Screen Reader accessibility enabled.');">Screen Reader Access</button>
+        <a href="#courses-section" class="access-tool" style="color: #fff;">Skip to Courses</a>
+        <a href="https://rgcsm.org" target="_blank" rel="noopener" class="access-tool" style="color: #fbbf24; font-weight: 700;">Parent Org: RGCSM (rgcsm.org)</a>
+        <div style="display: flex; gap: 2px;">
+          <button class="access-tool" onclick="document.body.style.fontSize='14px'">A-</button>
+          <button class="access-tool" onclick="document.body.style.fontSize='15px'">A</button>
+          <button class="access-tool" onclick="document.body.style.fontSize='17px'">A+</button>
+        </div>
+        <button class="access-tool" id="btn-lang-toggle" onclick="showToast('Bilingual mode: English / Devanagari Hindi active', 'info')">हिन्दी / English</button>
+        <button class="theme-toggle-btn" title="Toggle Standard/Dark Slate Mode">Mode</button>
+
+        <div class="utility-portals-group">
+          <button type="button" class="utility-portal-btn student" onclick="switchView('student')" title="Login to Student Portal">
+            🎓 Student Zone
+          </button>
+          <button type="button" class="utility-portal-btn staff" onclick="switchView('admin')" title="Login as Teacher / Instructor or Administrator">
+            🏛️ Teacher / Staff
+          </button>
+        </div>
+
+        <div class="gov-search-box">
+          <span class="gov-search-icon" aria-hidden="true">🔍</span>
+          <input type="text" id="quick-site-search" placeholder="Search RGCSM Courses, R20111, DOAP..." aria-label="Search Courses, Syllabus, Roll No" />
+          <button type="button" onclick="handleQuickSearch()">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       2. INSTITUTIONAL BILINGUAL MASTHEAD (RGCSM FRANCHISE)
+  ============================================================ -->
+  <div class="gov-masthead">
+    <div class="container gov-masthead-container">
+      <!-- Left: Emblem Seal & Bilingual Title -->
+      <div class="gov-brand-left">
+        <!-- Official Institutional Logo -->
+        <img src="assets/images/logo.png" alt="Saurya Computer Education Logo" class="gov-emblem-seal" style="object-fit: contain; width: 76px; height: 76px; border-radius: 50%; box-shadow: 0 4px 14px rgba(0,34,68,0.22); flex-shrink: 0;" />
+
+        <div class="gov-brand-titles">
+          <div class="gov-title-hindi">शौर्य कंप्यूटर एजुकेशन (RGCSM खैर)</div>
+          <div class="gov-title-english">SAURYA COMPUTER EDUCATION</div>
+          <div class="gov-subtitle-legal">
+            Authorised Study Centre of Rajeev Gandhi Computer Saksharta Mission (RGCSM) • Center / Franchise Code: UP-438 • ISO 9001:2015 Certified
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Accreditation & Verification Information -->
+      <div class="gov-brand-right">
+        <div class="gov-accreditation-box">
+          <div class="gov-accreditation-title" style="color: #d97706; font-weight: 800;">Authorised Study Centre — Khair</div>
+          <div class="gov-accreditation-desc">
+            Affiliated: Rajeev Gandhi Youth Computer Saksharta Mission<br>
+            Reg. Under C.R. Act of Ministry of HRD, Govt. of India<br>
+            Opposite Central Bank / Near KIC, Khair, Aligarh (U.P.) 202138<br>
+            <a href="https://rgcsm.org" target="_blank" rel="noopener" style="color: var(--gov-navy); font-weight: 700; text-decoration: underline;">Verify at: www.rgcsm.org</a>
+          </div>
+        </div>
+
+        <!-- Third-Party Affiliation Logo (RGCSM Right Side) -->
+        <a href="https://rgcsm.org" target="_blank" rel="noopener" title="Parent Organization: Rajeev Gandhi Computer Saksharta Mission (RGCSM)" class="gov-affiliation-link" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+          <img src="assets/images/rgcsm-logo.png" alt="RGCSM Affiliation Logo" class="gov-affiliation-logo" style="width: 76px; height: 76px; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       3. SOLID GOVERNMENT DEEP NAVY NAVIGATION BAR
+  ============================================================ -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero-section" class="nav-brand-anchor" title="Saurya Computer Education (Khair)" style="display: flex; align-items: center; gap: 8px; text-decoration: none; padding-right: 6px; flex-shrink: 0;">
+        <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 50%; background: #ffffff; padding: 1px; box-shadow: 0 2px 6px rgba(0,0,0,0.25);" />
+        <span style="font-weight: 800; font-size: 0.88rem; color: #ffffff; letter-spacing: 0.04em; white-space: nowrap;" class="hide-mobile">SAURYA</span>
+      </a>
+      <ul class="nav-menu" id="main-nav-menu">
+        <li><a href="#hero-section" class="nav-link active">Home</a></li>
+        <li><a href="#about-section" class="nav-link">About Center</a></li>
+        <li><a href="#courses-section" class="nav-link">Courses &amp; Fees</a></li>
+        <li><a href="#rgcsm-system-section" class="nav-link">RGCSM Exam &amp; Grading</a></li>
+        <li><a href="#facilities-section" class="nav-link">Labs &amp; Facilities</a></li>
+        <li><a href="#admissions-guide-section" class="nav-link">Admission Process</a></li>
+        <li><a href="#faq-section" class="nav-link">FAQs</a></li>
+        <li><a href="#contact-section" class="nav-link">Contact &amp; Location</a></li>
+      </ul>
+
+      <!-- Active Workspace Indicator & Context -->
+      <div id="header-workspace-indicator" class="workspace-indicator" style="display: none;">
+        <span class="workspace-badge" id="workspace-badge-label">🏛️ Staff Console</span>
+        <span class="workspace-divider">/</span>
+        <span class="workspace-subtext" id="workspace-subtext-label">Administrative Management &amp; Records</span>
+        <button type="button" class="btn btn-secondary btn-xs" onclick="switchView('public')" style="margin-left: 8px; font-size: 0.76rem; padding: 4px 10px;">
+          ← Return to Public Website
+        </button>
+      </div>
+
+      <!-- Action Area: Quick Search, Portals Access Dropdown & Online Apply -->
+      <div class="nav-actions">
+        <button type="button" class="nav-search-btn" id="btn-open-cmd" onclick="openCommandPalette()" title="Press Ctrl+K to search">
+          <span>🔍</span> <span class="hide-mobile">Search</span> <kbd class="cmd-kbd-badge">Ctrl K</kbd>
+        </button>
+
+        <!-- Compact Portals Access Dropdown (Replaces cramped pills) -->
+        <div class="portals-dropdown-wrap" id="portals-dropdown-wrap">
+          <button type="button" class="btn-portals-trigger" id="btn-portals-trigger" onclick="togglePortalsDropdown(event)" aria-haspopup="true" aria-expanded="false" title="Switch to Student, Teacher or Admin Workspace">
+            <span class="trigger-icon">🔐</span>
+            <span class="trigger-text">Portals</span>
+            <span class="trigger-arrow">▾</span>
+          </button>
+          <div class="portals-dropdown-popover" id="portals-dropdown-popover">
+            <div class="popover-header">SELECT PORTAL / WORKSPACE</div>
+            <a href="javascript:void(0)" class="popover-item" onclick="switchView('student'); closePortalsDropdown();">
+              <span class="popover-icon">🎓</span>
+              <div class="popover-details">
+                <span class="popover-title">Student Portal</span>
+                <span class="popover-subtitle">Attendance, Online Exams, Notes &amp; PVC ID</span>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="popover-item" onclick="switchView('admin'); closePortalsDropdown();">
+              <span class="popover-icon">🏛️</span>
+              <div class="popover-details">
+                <span class="popover-title">Staff &amp; Teacher Console</span>
+                <span class="popover-subtitle">Director Desk, Faculty Marks &amp; Batch Records</span>
+              </div>
+            </a>
+            <div class="popover-divider"></div>
+            <a href="javascript:void(0)" class="popover-item" onclick="switchView('public'); closePortalsDropdown();">
+              <span class="popover-icon">🌐</span>
+              <div class="popover-details">
+                <span class="popover-title">Public Website</span>
+                <span class="popover-subtitle">RGCSM Course Catalog, Fees &amp; Prospectus</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <button class="btn btn-accent btn-sm" onclick="openApplyModal()">
+          Online Admission
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Backdrop Dimmer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+  <!-- ============================================================
+       4. LATEST CIRCULARS & NOTICES TICKER (RGCSM DIRECTIVES)
+  ============================================================ -->
+  <div class="gov-ticker-bar">
+    <div class="ticker-label">RGCSM NOTICES</div>
+    <div class="ticker-track">
+      <div class="ticker-content">
+        <span class="ticker-item"><strong>[ADMISSIONS 2026-27]</strong> Admissions open for DOAP (R20111), DCA (R10104), ADCA (R20118), DCAA (R10203), PGDCA &amp; Tally Prime with GST. Free course kit bag, notebook &amp; study books included!</span>
+        <span class="ticker-item"><strong>[SPECIAL FEE CONCESSION]</strong> ₹1,000 concession for SC / ST / Differently-Abled (Handicapped) candidates on 1-year diplomas upon submitting category certificate.</span>
+        <span class="ticker-item"><strong>[RGCSM ONLINE EXAMINATIONS]</strong> On-Demand Online Objective Examination schedule open (50 MCQs × 2 = 100 marks theory per paper, 30 min duration).</span>
+        <span class="ticker-item"><strong>[NATIONWIDE VALIDITY]</strong> RGCSM marksheets and certificates are valid for registration in Employment Exchanges across India. Verify online at rgcsm.org.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4.1 RGCSM NATIONAL RECOGNITIONS & SKILL AFFILIATIONS STRIP (IMAGE 1)
+  ============================================================ -->
+  <div class="rgcsm-affiliations-bar">
+    <div class="container">
+      <div class="affiliations-header">
+        <div class="affiliations-title">
+          <span>🏛️</span> Associated With &amp; Recognized By National Skill Missions
+        </div>
+        <div style="font-size: 0.76rem; color: var(--text-muted);">
+          Mission Ek, Lakshya Anek • The Education Catalyst
+        </div>
+      </div>
+      <div class="affiliations-grid">
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">NSDC</span>
+          <span>National Skill Development Corporation</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">MSME</span>
+          <span>Ministry of MSME, Govt. of India</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">PMKVY</span>
+          <span>Pradhan Mantri Kaushal Vikas Yojana</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">UPSDM</span>
+          <span>हर हुनरमंद को काम — UP Skill Mission</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">ASSOCHAM</span>
+          <span>The Associated Chambers of Commerce &amp; Industry</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">NASSCOM</span>
+          <span>IT &amp; Software Services Companies</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">RASCI</span>
+          <span>Retailers Association Skill Council of India</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">TSSC</span>
+          <span>Telecom Sector Skill Council</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">PBSDM / RSLDC</span>
+          <span>State Skill &amp; Livelihood Missions</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">IEDUP</span>
+          <span>Dept of MSME, Govt. of Uttar Pradesh</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">BOSSE</span>
+          <span>Board of Open Schooling &amp; Skill Education</span>
+        </div>
+        <div class="affiliation-pill">
+          <span class="affiliation-tag">WBR LONDON</span>
+          <span>World Book of Records London</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       5. BREADCRUMBS STRIP
+  ============================================================ -->
+  <div class="gov-breadcrumb-bar">
+    <div class="container">
+      <div class="breadcrumb-box">
+        <a href="#hero-section" onclick="switchView('public')">Home</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <a href="#courses-section">RGCSM Academic Programs</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span id="breadcrumb-current-label">Khair Study Centre Overview</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ENVIRONMENT 1: PUBLIC WEBSITE & HOMEPAGE (Section 3)
+  ============================================================ -->
+  <main id="public-view">
+
+    <!-- 1. HERO SECTION (INSTITUTIONAL PRESENTATION) -->
+    <section class="section hero-section" id="hero-section">
+      <div class="container hero-grid">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-banner-tag">
+            <span>RGCSM AUTHORISED VOCATIONAL &amp; IT STUDY CENTRE</span>
+            <span>•</span>
+            <span>KHAIR (ALIGARH) — FRANCHISE CODE: UP-438</span>
+          </div>
+
+          <h1 class="hero-title">
+            Learn Practical Technology.<br>
+            <span class="title-sub">RGCSM Certified Computer Diplomas.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Saurya Computer Education in Khair (opposite Central Bank / near KIC) is an authorized franchise of Rajeev Gandhi Computer Saksharta Mission (RGCSM). Imparting government-recognized DOAP, DCA, ADCA, DCAA, PGDCA, Tally Prime with GST, Python &amp; DTP with free course kit bags, dual-screen practical labs, and online on-demand examinations.
+          </p>
+
+          <div class="hero-ctas">
+            <button class="btn btn-primary btn-lg" onclick="openApplyModal()">
+              Online Admission Application
+            </button>
+            <button class="btn btn-secondary btn-lg" onclick="openRgcsmIndexModal()">
+              Browse 50 RGCSM Courses
+            </button>
+            <button class="btn btn-outline btn-lg" onclick="switchView('student')">
+              Student Portal Login
+            </button>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="hero-highlight-item">
+              ■ Free Course Kit Bag, Notebook &amp; Books
+            </div>
+            <div class="hero-highlight-item">
+              ■ Ministry of HRD Registered Diplomas
+            </div>
+            <div class="hero-highlight-item">
+              ■ 4.7★ Rating (63+ Google Reviews)
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero: Technical Computing Infrastructure Schematic (Section 8.2) -->
+        <div class="hero-mascot-wrapper">
+          <div class="mascot-container" id="hero-mascot-container">
+            <!-- Dynamic Technical Schematic injected via js/mascot.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. COURSE CATALOG (RGCSM SPECIFICATIONS & REAL FEES) -->
+    <section class="section" id="courses-section">
+      <div class="container">
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="badge badge-primary">RGCSM Academic Curriculum</span>
+            <h2>Official Course Catalog &amp; Fee Specifications</h2>
+            <p>Government-recognized diplomas &amp; certificates registered under C.R. Act of Ministry of HRD, Govt. of India.</p>
+          </div>
+          <button class="btn btn-secondary btn-md" onclick="openRgcsmIndexModal()" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>📑</span> Browse Complete 50-Course RGCSM Index &amp; Codes
+          </button>
+        </div>
+
+        <!-- Fee Concession & Kit Banner -->
+        <div style="background: rgba(22, 163, 74, 0.08); border: 1px solid var(--accent-emerald); border-left: 5px solid var(--accent-emerald); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <strong style="color: var(--accent-emerald); font-size: 0.95rem; display: block; margin-bottom: 2px;">
+              🎁 RGCSM Student Kit &amp; Fee Concession Directive
+            </strong>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">
+              • Special Fee Concession: <strong>₹1,000 discount</strong> on 1-year diplomas (DOAP, ADCA) and <strong>₹500 discount</strong> on DCA for SC / ST / Differently-Abled (Handicapped) candidates upon submitting caste certificate.<br>
+              • All registered students receive <strong>free of cost written course material, official kit bag &amp; note book</strong> for classroom and lab training!
+            </span>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openApplyModal()">
+            Claim Concession &amp; Apply
+          </button>
+        </div>
+
+        <!-- Category Filter Bar -->
+        <div class="course-filters">
+          <button class="filter-btn active" data-category="all">All Programs</button>
+          <button class="filter-btn" data-category="Job-Oriented Diplomas">Job-Oriented Diplomas</button>
+          <button class="filter-btn" data-category="Accounting & Finance">Accounting &amp; Finance</button>
+          <button class="filter-btn" data-category="Software & Coding">Software &amp; Coding</button>
+          <button class="filter-btn" data-category="Certificate Courses">Certificate Courses</button>
+          <button class="filter-btn" data-category="Design & Media">Design &amp; Media</button>
+          <button class="filter-btn" data-category="Hardware & Systems">Hardware &amp; Systems</button>
+          <button class="filter-btn" data-category="Emerging Technologies">AI &amp; Emerging Tech</button>
+        </div>
+
+        <!-- Course Cards Grid -->
+        <div class="courses-grid" id="courses-grid">
+          <!-- Injected via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 RGCSM ACADEMIC FRAMEWORK, EXAMINATION & GRADING SYSTEM (IMAGE 2 & 3) -->
+    <section class="section" id="rgcsm-system-section" style="background: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-amber">Official RGCSM Guidelines</span>
+          <h2>RGCSM Academic Framework, Examination &amp; Grading System</h2>
+          <p>Strict evaluation standards, on-demand online assessments, and government employment exchange recognized credentials.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 30px;" class="system-grid-wrap">
+          <!-- Card 1: Two Processes of Registration -->
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 4px solid var(--gov-navy); padding: 22px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+              <span style="font-size: 1.4rem;">📝</span>
+              <h3 style="color: var(--gov-navy); margin: 0; font-size: 1.15rem;">Two Processes of Registration</h3>
+            </div>
+            <div style="margin-bottom: 14px;">
+              <strong style="color: var(--gov-navy); font-size: 0.9rem; display: block;">1. Offline Registration:</strong>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 4px 0 8px;">
+                Fill the application form provided with the student prospectus at our Khair study centre. Submit attested photocopies of your last educational qualification, 2 recent passport-size photos, and Category Certificate (ST/SC/Handicapped) for fee relaxation. An official Student ID Card is issued by RGCSM H.O.
+              </p>
+            </div>
+            <div>
+              <strong style="color: var(--gov-navy); font-size: 0.9rem; display: block;">2. Online Registration:</strong>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 4px 0 8px;">
+                Registered candidates can apply online. The Center Director logs into the RGCSM center portal, uploads required documents with candidate photograph, and processes payment. A permanent RGCSM Enrollment Number is generated for dispatching the student kit bag, notebook, marksheets, and diploma.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Examination & Evaluation Pattern -->
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 4px solid var(--gov-orange); padding: 22px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+              <span style="font-size: 1.4rem;">💻</span>
+              <h3 style="color: var(--gov-navy); margin: 0; font-size: 1.15rem;">On-Demand Online Examination System</h3>
+            </div>
+            <ul style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0; padding-left: 20px;">
+              <li><strong>Continuous On-Demand Schedule:</strong> Examinations conducted all round the year at our authorized RGCSM center in Khair.</li>
+              <li><strong>Theory Question Paper:</strong> Objective type format with <strong>50 questions per module</strong> (2 marks each = 100 Marks total per paper). Duration: 30 Minutes per paper.</li>
+              <li><strong>Practical &amp; Viva:</strong> Total 100 Marks (60 Marks for Lab Practice &amp; 40 Marks for Viva Voce).</li>
+              <li><strong>Passing Criteria:</strong> Minimum qualifying marks for semester exam is <strong>40%</strong> for both Diploma and Certificate courses.</li>
+              <li><strong>Result &amp; Marksheet:</strong> Issued within <strong>30 days</strong> of online examination by RGCSM Head Office.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Official Grading Matrix Table (Image 3) -->
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 4px solid var(--accent-emerald); padding: 22px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
+            <div>
+              <h3 style="color: var(--gov-navy); margin: 0; font-size: 1.15rem;">Official RGCSM Grading System</h3>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin: 2px 0 0;">Awarded on final marksheet and transcript based on percentage obtained</p>
+            </div>
+            <span class="badge badge-green">Qualifying Mark: 40%</span>
+          </div>
+
+          <div class="grading-table-container" style="margin-top: 0;">
+            <table class="grading-table">
+              <thead>
+                <tr>
+                  <th>Percentage Range</th>
+                  <th>Awarded Grade</th>
+                  <th>Classification</th>
+                  <th>Academic Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>&gt;= 80%</strong></td>
+                  <td><span class="grade-pill-a-plus">A+</span></td>
+                  <td><strong>Distinction / Outstanding</strong></td>
+                  <td>Eligible for academic honors and merit recommendations</td>
+                </tr>
+                <tr>
+                  <td><strong>&gt;= 70% to &lt; 80%</strong></td>
+                  <td><span class="badge badge-primary">A</span></td>
+                  <td><strong>First Division (Excellent)</strong></td>
+                  <td>Strong theoretical and laboratory competence</td>
+                </tr>
+                <tr>
+                  <td><strong>&gt;= 60% to &lt; 70%</strong></td>
+                  <td><span class="badge badge-secondary">B+</span></td>
+                  <td><strong>Second Division Upper (Very Good)</strong></td>
+                  <td>Good practical execution and concept understanding</td>
+                </tr>
+                <tr>
+                  <td><strong>&gt;= 50% to &lt; 60%</strong></td>
+                  <td><span class="badge badge-amber">B</span></td>
+                  <td><strong>Second Division (Good)</strong></td>
+                  <td>Satisfactory completion of all course modules</td>
+                </tr>
+                <tr>
+                  <td><strong>&gt;= 40% to &lt; 50%</strong></td>
+                  <td><span class="badge badge-secondary">C</span></td>
+                  <td><strong>Pass Division</strong></td>
+                  <td>Minimum required standard for credential award</td>
+                </tr>
+                <tr>
+                  <td><strong>&lt; 40%</strong></td>
+                  <td><span class="badge badge-rose" style="background: rgba(220, 38, 38, 0.15); color: #dc2626;">Re-Exam</span></td>
+                  <td><strong>Failed in Subject Module</strong></td>
+                  <td>Eligible to appear in Re-Examination upon module fee payment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; font-size: 0.82rem; color: var(--text-secondary);" class="system-sub-info">
+            <div style="background: var(--bg-alt); padding: 10px 14px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--gov-navy);">🏛️ Employment Exchange Recognition:</strong>
+              RGCSM Certificates &amp; Diplomas are valid for registering students in Employment Exchanges all over India and recognized for private &amp; public sector technical requirements.
+            </div>
+            <div style="background: var(--bg-alt); padding: 10px 14px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--gov-navy);">📚 Library Facility Policy:</strong>
+              Registered students can avail library facilities with a ₹250/- fee (₹150/- refundable upon completion, ₹100/- development charge).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INSTITUTE INTRODUCTION & ABOUT US (RGCSM KHAIR PROFILE) -->
+    <section class="section" id="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-secondary">Institutional Background</span>
+          <h2>About Saurya Computer Education (RGCSM Khair)</h2>
+          <p>Authorised study centre of Rajeev Gandhi Computer Saksharta Mission in Khair, Aligarh committed to disciplined, job-oriented technical education since 2012.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;" class="about-grid-wrap">
+          <div>
+            <h3 style="color: var(--gov-navy); margin-bottom: 12px;">Center Profile &amp; Mission</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+              <strong>Saurya Computer Education</strong> in Khair is a premier computer training and vocational education center located at Taintigaon Tiraha, near KIC (Kedar Inter College), opposite Central Bank in Khair, Aligarh, Uttar Pradesh.
+            </p>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+              Affiliated with <strong>Rajeev Gandhi Youth Computer Saksharta Mission (RGCSM Khair)</strong>, an autonomous body registered under the Societies &amp; Public Trust Act 1860, ISO 9001:2015 certified, and registered under the C.R. Act of Ministry of HRD (Dept. of Secondary &amp; Higher Education), Govt. of India. Our courses range from 1 to 24 months covering DOAP, DCA, ADCA, DCAA, PGDCA, Tally Prime with GST, Python, and Graphic Design.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div style="background: var(--bg-surface); padding: 14px; border: 1px solid var(--border-color); border-top: 3px solid var(--gov-navy);">
+                <strong style="color: var(--gov-navy); font-size: 0.92rem; display: block; margin-bottom: 2px;">4.7★ Google Rating</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Verified 4.7-star rating across 63+ public Google student reviews.</p>
+              </div>
+              <div style="background: var(--bg-surface); padding: 14px; border: 1px solid var(--border-color); border-top: 3px solid var(--gov-orange);">
+                <strong style="color: var(--gov-navy); font-size: 0.92rem; display: block; margin-bottom: 2px;">Free Student Kits</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Official kit bags, notebooks &amp; study materials included for all students.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="border: 1px solid var(--border-color); box-shadow: var(--shadow-md); background: var(--bg-surface);">
+            <img src="assets/images/director.jpg" alt="Saurya Computer Education Khair Campus" style="width: 100%; height: 350px; object-fit: cover; display: block;" />
+            <div style="padding: 10px 14px; background: var(--bg-surface); border-top: 1px solid var(--border-color); font-size: 0.82rem; color: var(--text-secondary);">
+              <strong>Saurya Computer Education:</strong> Opposite Central Bank / Near KIC, Khair, Aligarh (U.P.) • Helplines: +91 99272 92060 / +91 90847 67670 • Code: UP-438
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TEACHING APPROACH & FACILITIES -->
+    <section class="section" id="facilities-section" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Infrastructure</span>
+          <h2>Teaching Approach &amp; Campus Facilities</h2>
+          <p>Engineered for high-focus vocational training, laboratory bench discipline, and transparent management.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">01</div>
+            <h3 class="feature-title">Dual-Screen Workstation Labs</h3>
+            <p class="feature-desc">Workstations equipped with dual monitors enabling students to cross-reference coding syntax, GST balance sheets, and technical blueprints concurrently.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">02</div>
+            <h3 class="feature-title">Operational Attendance Tracking</h3>
+            <p class="feature-desc">Enforced daily check-in and check-out tracking maintaining an auditable, timestamped ledger of practical lab hours and punctuality.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">03</div>
+            <h3 class="feature-title">Official RGCSM Course Materials</h3>
+            <p class="feature-desc">All students receive free written theory course materials, official RGCSM kit bags, and practice notebooks for comprehensive revision.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">04</div>
+            <h3 class="feature-title">On-Demand Online Examinations</h3>
+            <p class="feature-desc">Controlled 30-minute online objective assessment tests (50 questions, 100 marks) with instant submission and practical lab evaluations.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">05</div>
+            <h3 class="feature-title">Auditable Fee Management</h3>
+            <p class="feature-desc">Transparent fee schedules, installment milestones, authorized receipt generation, and real-time transaction ledger verification.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">06</div>
+            <h3 class="feature-title">Verifiable RGCSM Credentials</h3>
+            <p class="feature-desc">Permanent Enrollment Numbers and Student IDs for lifelong academic credential verification on www.rgcsm.org and employment exchanges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. COURSE ADMISSION PROCESS -->
+    <section class="section" id="admissions-guide-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-amber">Admissions</span>
+          <h2>Official Course Admission Procedure</h2>
+          <p>A transparent four-stage process governing application review, batch allotment, and student account creation.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+          <div class="feature-box">
+            <span class="badge badge-primary" style="margin-bottom: 10px;">Stage 1</span>
+            <h4 style="font-size: 1.05rem; margin-bottom: 6px; color: var(--gov-navy);">Review &amp; Select Program</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Examine 1-year diplomas (DOAP, ADCA), 6-month programs (DCA, DCAA), or certifications in Tally, Python, and Web Design.</p>
+          </div>
+
+          <div class="feature-box">
+            <span class="badge badge-primary" style="margin-bottom: 10px;">Stage 2</span>
+            <h4 style="font-size: 1.05rem; margin-bottom: 6px; color: var(--gov-navy);">Submit Application</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Register offline at our Khair center with 2 passport photos and qualification certificates, or submit the online form.</p>
+          </div>
+
+          <div class="feature-box">
+            <span class="badge badge-primary" style="margin-bottom: 10px;">Stage 3</span>
+            <h4 style="font-size: 1.05rem; margin-bottom: 6px; color: var(--gov-navy);">Fee Concession &amp; Allotment</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Submit category certificate for SC/ST fee relaxation. Batch slot (morning, mid-day, evening) and lab seat assigned.</p>
+          </div>
+
+          <div class="feature-box">
+            <span class="badge badge-primary" style="margin-bottom: 10px;">Stage 4</span>
+            <h4 style="font-size: 1.05rem; margin-bottom: 6px; color: var(--gov-navy);">Kit &amp; ID Card Issuance</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Receive free RGCSM course kit bag, notebook, study materials, and permanent Student ID credentials.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <button class="btn btn-primary btn-lg" onclick="openApplyModal()">
+            Proceed to Online Admission Form
+          </button>
+          <button class="btn btn-secondary btn-lg" onclick="openRgcsmIndexModal()">
+            View 50-Course RGCSM Index
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FREQUENTLY ASKED QUESTIONS (OFFICIAL RGCSM GUIDELINES) -->
+    <section class="section" id="faq-section">
+      <div class="container" style="max-width: 960px;">
+        <div class="section-header">
+          <span class="badge badge-secondary">Official Inquiries &amp; RGCSM Rules</span>
+          <h2>Frequently Asked Questions (FAQ)</h2>
+          <p>Authentic guidelines regarding RGCSM affiliation, course registration, kit bags, examination format, grading, and certificate validity.</p>
+        </div>
+
+        <div class="faq-box-container">
+          <div class="faq-group-title">Frequently Asked Questions on RGCSM Diplomas &amp; Saurya Computer Education Khair</div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q1</span>
+              <span>What is Saurya Computer Education's affiliation and registration status?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A1</span>
+              Saurya Computer Education in Khair is an Authorised Study Centre and franchise of <strong>Rajeev Gandhi Computer Saksharta Mission (RGCSM)</strong>. RGCSM is an autonomous national organization registered under the Societies &amp; Public Trust Act 1860, ISO 9001:2015 certified, and registered under the C.R. Act of Ministry of HRD (Dept. of Secondary &amp; Higher Education), Govt. of India. Our center is located at Taintigaon Tiraha, near KIC (Kedar Inter College), opposite Central Bank in Khair, Aligarh, Uttar Pradesh.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q2</span>
+              <span>How does the admission registration process work (Offline vs Online)?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A2</span>
+              Students can register in two ways:<br>
+              <strong>1. Offline Registration:</strong> Visit our study centre near KIC Khair, obtain the prospectus, fill the application form, and submit 2 recent passport photos, attested educational certificates, and category certificate (if claiming SC/ST fee relaxation). A verified Student ID Card will be issued.<br>
+              <strong>2. Online Registration:</strong> Apply online through this portal. Our Center Director submits candidate credentials via the RGCSM authorized center panel on rgcsm.org, generating an official enrollment number used to dispatch your student kit, marksheet, and diploma.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q3</span>
+              <span>Are course materials and kit bags provided free of cost with admissions?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A3</span>
+              <strong>Yes!</strong> All enrolled diploma students receive free-of-cost written course material for theory classes, an official student kit bag, and notebook directly through our RGCSM study centre.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q4</span>
+              <span>What are the fee structures and concessions available for students?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A4</span>
+              Our fee structure is completely transparent and matches official prospectus standards:<br>
+              • <strong>1-Year Flagship Diplomas (DOAP - Code R20111, ADCA - Code R20118):</strong> ₹15,000 for General Candidates, with a special fee concession of <strong>₹14,000 for SC/ST/Handicapped candidates</strong>.<br>
+              • <strong>6-Month Diploma (DCA - Code R10104):</strong> ₹8,000 for General Candidates, and <strong>₹7,500 for SC/ST/Handicapped candidates</strong>.<br>
+              • <strong>DCAA (Computer Application &amp; Accounting):</strong> ₹9,000.<br>
+              • <strong>Tally Prime with GST:</strong> ₹5,500.<br>
+              • <strong>RG-CIT / CCOAI (CCC Equivalent):</strong> ₹3,500.<br>
+              • <strong>Python Programming:</strong> ₹6,500.<br>
+              Flexible installment payment options are available for all diploma courses.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q5</span>
+              <span>What is the examination procedure and qualifying criteria?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A5</span>
+              RGCSM conducts an <strong>On-Demand Online Examination</strong> system all round the year:<br>
+              • <strong>Theory:</strong> 50 objective multiple-choice questions (2 marks each = 100 marks total per paper, 30 minutes duration) delivered on screen.<br>
+              • <strong>Practical Exam:</strong> 100 Marks (60 Marks for Lab Practical Exercise + 40 Marks for Viva Voce).<br>
+              • <strong>Passing Standard:</strong> Minimum qualifying score is <strong>40% in each semester examination</strong>. Re-examination is available if a student fails to clear a module.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q6</span>
+              <span>How does the RGCSM percentage grading scale work?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A6</span>
+              Grades are assigned based on total marks obtained across theory and practical modules:<br>
+              • <strong>&gt;= 80%: Grade A+ (Outstanding / Distinction)</strong><br>
+              • <strong>70% to &lt; 80%: Grade A (Excellent)</strong><br>
+              • <strong>60% to &lt; 70%: Grade B+ (Very Good)</strong><br>
+              • <strong>50% to &lt; 60%: Grade B (Good)</strong><br>
+              • <strong>40% to &lt; 50%: Grade C (Satisfactory / Pass)</strong><br>
+              • <strong>&lt; 40%: Re-Examination Required</strong>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q7</span>
+              <span>Are RGCSM diploma certificates valid for government employment exchanges?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A7</span>
+              <strong>Yes, absolutely.</strong> After successful course completion, Certificate / Diploma will be awarded by Rajeev Gandhi Computer Saksharta Mission (H.O. Kota), and these certificates/diplomas will be valid for registering the students in <strong>different employment exchanges all over India</strong>. Certificates and marksheets are verifiable anytime under the "Student Section" on <a href="https://rgcsm.org" target="_blank" rel="noopener noreferrer" style="color: var(--gov-navy); font-weight: 700; text-decoration: underline;">www.rgcsm.org</a>.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-num">Q8</span>
+              <span>What is the center's location, contact phone, and operating hours in Khair?</span>
+            </div>
+            <div class="faq-answer">
+              <span class="a-num">A8</span>
+              • <strong>Address:</strong> Taintigaon Tiraha, Near KIC (Kedar Inter College), Opposite Central Bank, Khair, Aligarh, Uttar Pradesh – 202138.<br>
+              • <strong>Center / Franchise Code:</strong> <code>UP-438</code> (Authorized RGCSM Study Centre)<br>
+              • <strong>Helpline Phones:</strong> <a href="tel:9927292060" style="color: var(--gov-navy); font-weight: 700;">+91 99272 92060</a> / <a href="tel:9084767670" style="color: var(--gov-navy); font-weight: 700;">+91 90847 67670</a><br>
+              • <strong>Official Emails:</strong> <a href="mailto:Enquiry@sauryacomputer.com" style="color: var(--gov-navy); font-weight: 700;">Enquiry@sauryacomputer.com</a> / <a href="mailto:Official.sauryacomputer@gmail.com" style="color: var(--gov-navy); font-weight: 700;">Official.sauryacomputer@gmail.com</a><br>
+              • <strong>Operating Hours:</strong> Monday to Saturday: 8:00 AM – 5:00 PM (Closed on Sundays).<br>
+              • <strong>Google Rating:</strong> Rated <strong>4.7★ across 63+ verified reviews</strong> by students and alumni.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT & LOCATION (KHAIR, ALIGARH CAMPUS) -->
+    <section class="section" id="contact-section" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Authorized Study Centre</span>
+          <h2>Contact &amp; Khair Campus Administration</h2>
+          <p>Visit our campus during official hours for prospectus collection, admission counseling, lab tours, or certificate inquiries.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;" class="contact-grid-wrap">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 3px solid var(--gov-navy); padding: 24px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 46px; height: 46px; object-fit: contain; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0;" />
+                <div>
+                  <h3 style="color: var(--gov-navy); margin: 0; font-size: 1.15rem;">Saurya Computer Education</h3>
+                  <span style="font-size: 0.76rem; color: #d97706; font-weight: 700;">RGCSM Franchise Code: UP-438</span>
+                </div>
+              </div>
+              <div class="google-review-badge" style="margin: 0;">
+                <span class="gr-star">★</span>
+                <span class="gr-score">4.7 / 5.0</span>
+                <span class="gr-count">(63+ Google Reviews)</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: var(--gov-navy); display: block; font-size: 0.85rem;">CAMPUS ADDRESS:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 2px;">
+                Taintigaon Tiraha, Near KIC (Kedar Inter College), Opposite Central Bank of India, Khair, Aligarh, Uttar Pradesh – 202138
+              </p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: var(--gov-navy); display: block; font-size: 0.85rem;">TELEPHONES &amp; OFFICIAL HELPLINES:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 2px;">
+                <a href="tel:9927292060" style="color: var(--gov-navy); font-weight: 700;">+91 99272 92060</a> / 
+                <a href="tel:9084767670" style="color: var(--gov-navy); font-weight: 700;">+91 90847 67670</a>
+              </p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: var(--gov-navy); display: block; font-size: 0.85rem;">OFFICIAL INQUIRY &amp; ADMISSION EMAILS:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 2px;">
+                <a href="mailto:Enquiry@sauryacomputer.com" style="color: var(--gov-navy); font-weight: 600;">Enquiry@sauryacomputer.com</a><br>
+                <a href="mailto:Official.sauryacomputer@gmail.com" style="color: var(--gov-navy); font-weight: 600;">Official.sauryacomputer@gmail.com</a>
+              </p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: var(--gov-navy); display: block; font-size: 0.85rem;">OFFICE &amp; PRACTICAL LAB HOURS:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 2px;">
+                <strong>Monday to Saturday:</strong> 08:00 AM – 05:00 PM IST<br>
+                <span style="color: var(--accent-crimson); font-weight: 600;">Sunday: Closed</span> (Official Center Rest Day)
+              </p>
+            </div>
+
+            <div style="padding: 10px 14px; background: var(--bg-alt); border-left: 3px solid var(--accent-amber); font-size: 0.8rem; color: var(--text-secondary);">
+              <strong>Affiliated Study Centre:</strong> Rajeev Gandhi Computer Saksharta Mission (RGCSM, Head Office: Kota, Rajasthan). Franchise / Center Code: <code>UP-438</code>.
+            </div>
+          </div>
+
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 3px solid var(--gov-orange); padding: 24px;">
+            <h3 style="color: var(--gov-navy); margin-bottom: 10px;">Inquire for 2026-27 Batch Admission</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px;">
+              Submit your inquiry and our academic counselor in Khair will contact you with fee concessions, batch timings, and registration forms.
+            </p>
+
+            <form onsubmit="event.preventDefault(); showToast('Inquiry registered successfully! Our Khair counseling desk will call you shortly.', 'success'); this.reset();">
+              <div class="form-group">
+                <label class="form-label">Full Legal Name</label>
+                <input type="text" class="form-control" placeholder="Candidate's legal name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Contact Mobile Number</label>
+                <input type="tel" class="form-control" placeholder="10-digit mobile number" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Academic Program of Interest</label>
+                <select class="form-control">
+                  <option>DOAP — Diploma in Office Automation &amp; Publishing (Code R20111 • ₹15,000)</option>
+                  <option>ADCA — Advance Diploma in Computer Application (Code R20118 • ₹15,000)</option>
+                  <option>DCA — Diploma in Computer Application (Code R10104 • ₹8,000)</option>
+                  <option>DCAA — Computer Application &amp; Accounting (Code R10203 • ₹9,000)</option>
+                  <option>PGDCA — Post Graduate Diploma (Code R30105 • ₹18,000)</option>
+                  <option>Professional Tally Prime with GST (Code R10607 • ₹5,500)</option>
+                  <option>RG-CIT / CCOAI (Office Automation &amp; Internet • ₹3,500)</option>
+                  <option>Professional Course in Python PTY (Code R10621 • ₹6,500)</option>
+                  <option>DTP — Desk Top Publication (Code R10101 • ₹5,000)</option>
+                  <option>DMM / DCH — Hardware &amp; Mobile Maintenance (Code R10401 • ₹8,000)</option>
+                  <option>Certificate Course in ChatGPT &amp; AI (Code R10623 • ₹5,000)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Submit Official Inquiry to Khair Desk
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (RGCSM KHAIR OFFICIAL INFORMATION) -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 50%; background: #ffffff; padding: 2px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); flex-shrink: 0;" />
+            <img src="assets/images/rgcsm-logo.png" alt="RGCSM Affiliation Logo" style="width: 48px; height: 48px; object-fit: contain; background: #ffffff; border-radius: 50%; padding: 2px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); flex-shrink: 0;" />
+            <div>
+              <h4 style="color: #ffffff; margin: 0; font-size: 1.05rem;">Saurya Computer Education</h4>
+              <span style="font-size: 0.76rem; color: #f59e0b; font-weight: 700;">RGCSM Franchise Code: UP-438</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; color: #cbd5e1;">
+            Authorised Study Centre &amp; Franchise of <strong>Rajeev Gandhi Computer Saksharta Mission (RGCSM)</strong>. Autonomous organization registered under Society &amp; Public Trust Act 1860, ISO 9001:2015 certified, and registered under C.R. Act of Ministry of HRD, Govt. of India.
+          </p>
+          <div style="font-size: 0.78rem; color: #f59e0b; margin-bottom: 6px;">
+            Center / Franchise Code: UP-438 • Head Office: Kota, Rajasthan
+          </div>
+          <div style="font-size: 0.78rem; color: #38bdf8;">
+            ⭐ Rated 4.7★ across 63+ Google Reviews in Khair, Aligarh
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Flagship Programs</h4>
+          <ul class="footer-links">
+            <li><a href="#courses-section" onclick="openSyllabusModal('doap')">DOAP (Code R20111) — 1 Year</a></li>
+            <li><a href="#courses-section" onclick="openSyllabusModal('adca')">ADCA (Code R20118) — 1 Year</a></li>
+            <li><a href="#courses-section" onclick="openSyllabusModal('dca')">DCA (Code R10104) — 6 Months</a></li>
+            <li><a href="#courses-section" onclick="openSyllabusModal('dcaa')">DCAA (Code R10203) — 6 Months</a></li>
+            <li><a href="#courses-section" onclick="openSyllabusModal('tally-gst')">Tally Prime with GST</a></li>
+            <li><a href="javascript:void(0)" onclick="openRgcsmIndexModal()" style="color: var(--accent-amber); font-weight: 700;">📑 View 50-Course RGCSM Directory</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Portals &amp; Verification</h4>
+          <ul class="footer-links">
+            <li><a href="#student" onclick="switchView('student')">Student Portal Login</a></li>
+            <li><a href="#student" onclick="switchView('student')">Online Examination Hall</a></li>
+            <li><a href="#student" onclick="switchView('student')">PVC ID Card &amp; Scorecard</a></li>
+            <li><a href="#admin" onclick="switchView('admin')">Staff &amp; Faculty Console</a></li>
+            <li><a href="https://rgcsm.org" target="_blank" rel="noopener noreferrer">RGCSM Head Office (www.rgcsm.org)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khair Campus Address</h4>
+          <p style="font-size: 0.82rem; line-height: 1.6; margin-bottom: 8px; color: #cbd5e1;">
+            Taintigaon Tiraha, Near KIC (Kedar Inter College), Opposite Central Bank, Khair, Aligarh, Uttar Pradesh 202138<br>
+            Phone: <a href="tel:9927292060" style="color: #ffffff; font-weight: 700;">+91 99272 92060</a> / <a href="tel:9084767670" style="color: #ffffff; font-weight: 700;">+91 90847 67670</a><br>
+            Email: <a href="mailto:Enquiry@sauryacomputer.com" style="color: #38bdf8;">Enquiry@sauryacomputer.com</a><br>
+            Official: <a href="mailto:Official.sauryacomputer@gmail.com" style="color: #cbd5e1;">Official.sauryacomputer@gmail.com</a><br>
+            Hours: Mon–Sat: 8:00 AM – 5:00 PM (Sun: Closed)
+          </p>
+          <button class="btn btn-accent btn-sm" onclick="openApplyModal()">
+            Online Admission 2026-27
+          </button>
+        </div>
+      </div>
+
+      <div class="container footer-bottom-bar">
+        <div>
+          © 2026 Saurya Computer Education, Khair (Aligarh). Authorised Study Centre of Rajeev Gandhi Computer Saksharta Mission. All diplomas valid in Employment Exchanges all over India.
+        </div>
+        <div>
+          <a href="https://rgcsm.org" target="_blank" rel="noopener noreferrer" style="color: #cbd5e1;">RGCSM H.O. Kota</a> • <span>Student Prospectus</span> • <span>ISO 9001:2015</span>
+        </div>
+      </div>
+
+      <div class="container footer-developer-bar" style="border-top: 1px solid rgba(255, 255, 255, 0.12); margin-top: 14px; padding-top: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.82rem; color: #cbd5e1;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></span>
+          <span>Portal Architecture &amp; System Entirely Developed by <strong style="color: #ffffff; font-weight: 700; letter-spacing: 0.3px;">Aditya Kaushik</strong></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <span style="color: #94a3b8;">Developer Contact:</span>
+          <a href="mailto:scarfaceatwork@outlook.com" style="color: #38bdf8; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+            ✉ scarfaceatwork@outlook.com
+          </a>
+          <span style="color: rgba(255,255,255,0.25);">•</span>
+          <a href="mailto:Kaushikaditya5555@gmail.com" style="color: #38bdf8; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+            ✉ Kaushikaditya5555@gmail.com
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============================================================
+       ENVIRONMENT 2: STUDENT PANEL (Section 4)
+  ============================================================ -->
+  <main id="student-view" style="display: none;">
+    <div class="container portal-wrapper">
+
+      <!-- Student Login Screen -->
+      <div id="student-auth-view" class="portal-auth-card">
+        <div class="portal-auth-header">
+          <div class="portal-auth-icon" style="background: transparent; border: none; box-shadow: none; width: auto; height: auto; margin-bottom: 12px;">
+            <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 70px; height: 70px; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 14px rgba(0,34,68,0.22);" />
+          </div>
+          <h2 style="color: var(--gov-navy); border-bottom: none;">Student Portal Login</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Secure workspace for enrolled students • Franchise Code: UP-438
+          </p>
+        </div>
+
+        <form id="student-login-form">
+          <div class="form-group" style="text-align: left;">
+            <label class="form-label">Student ID (Format: SCE-2026-XXXX)</label>
+            <input type="text" id="student-login-id" class="form-control" placeholder="e.g. SCE-2026-0001" required />
+          </div>
+          <div class="form-group" style="text-align: left;">
+            <label class="form-label">Account Password</label>
+            <div class="password-input-wrapper">
+              <input type="password" id="student-login-pass" class="form-control" placeholder="••••••••" required />
+              <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" data-target="student-login-pass">👁️</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+            Authenticate Student Access
+          </button>
+        </form>
+
+        <div class="demo-credentials-box">
+          <strong>⚡ Authorized Demo Student Credentials:</strong><br>
+          Student ID: <code>SCE-2026-0001</code> | Password: <code>student123</code><br>
+          <button class="btn btn-secondary btn-sm" id="btn-demo-student-login" style="margin-top: 8px; width: 100%;">
+            Auto-Fill Demo Student Credentials
+          </button>
+        </div>
+      </div>
+
+      <!-- Authenticated Student Workspace -->
+      <div id="student-main-layout" class="portal-layout" style="display: none;">
+        <!-- Left Sidebar Navigation -->
+        <aside class="portal-sidebar">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--border-color); margin-bottom: 12px;">
+            <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 32px; height: 32px; object-fit: contain; border-radius: 50%; box-shadow: 0 1px 4px rgba(0,0,0,0.15); flex-shrink: 0;" />
+            <div style="font-size: 0.78rem; font-weight: 800; color: var(--gov-navy); line-height: 1.2;">
+              SAURYA EDUCATION<br><span style="font-size: 0.68rem; color: #d97706; font-weight: 700;">FRANCHISE: UP-438</span>
+            </div>
+          </div>
+          <div class="student-mini-profile">
+            <img src="assets/images/director.jpg" id="student-sidebar-avatar" class="student-avatar" alt="Student Profile" />
+            <h3 class="student-sidebar-name" id="student-sidebar-name">Student Name</h3>
+            <span class="student-sidebar-id" id="student-sidebar-id">SCE-2026-0001</span>
+          </div>
+
+          <ul class="portal-nav-list">
+            <li class="portal-nav-item active" data-pane="dashboard">
+              <span>■</span> Dashboard Overview
+            </li>
+            <li class="portal-nav-item" data-pane="attendance">
+              <span>■</span> Attendance (Check-In)
+            </li>
+            <li class="portal-nav-item" data-pane="fees">
+              <span>■</span> Fee Accounting Ledger
+            </li>
+            <li class="portal-nav-item" data-pane="courses">
+              <span>■</span> Enrolled Syllabus
+            </li>
+            <li class="portal-nav-item" data-pane="notes">
+              <span>■</span> Study Notes &amp; Papers
+            </li>
+            <li class="portal-nav-item" data-pane="exams">
+              <span>■</span> Examination Hall
+            </li>
+            <li class="portal-nav-item" data-pane="results">
+              <span>■</span> Results &amp; Marksheet
+            </li>
+            <li class="portal-nav-item" data-pane="idcard">
+              <span>■</span> Student Identity Card
+            </li>
+            <li class="portal-nav-item" data-pane="logout" style="color: var(--accent-rose); margin-top: 14px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+              <span>■</span> Sign Out
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Right Content Panes -->
+        <div class="portal-content-area">
+
+          <!-- Pane 1: Dashboard (Section 4.1) -->
+          <div class="portal-view-pane active" id="pane-dashboard">
+            <div class="portal-welcome-card" style="margin-bottom: 20px;">
+              <div class="welcome-info">
+                <h2 id="student-welcome-title">Student Name</h2>
+                <span class="welcome-course-tag" id="student-welcome-meta">Student ID • Program Details</span>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+                  Welcome to your operational student workspace. Keep your lab check-ins up to date.
+                </p>
+              </div>
+            </div>
+
+            <!-- Attendance & Fee Status Row -->
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; margin-bottom: 20px;" class="dash-widgets-row">
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 18px;" id="dash-today-att-status">
+                <!-- Injected via js/student.js -->
+              </div>
+
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 18px; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Fee Balance Due</div>
+                  <strong style="font-size: 1.5rem; color: var(--gov-navy);" id="dash-fee-balance-val">₹0</strong>
+                  <div style="margin-top: 4px;"><span class="badge badge-amber" id="dash-fee-badge">Pending Balance</span></div>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="studentPortal.switchPane('fees')">
+                  Fee Details
+                </button>
+              </div>
+            </div>
+
+            <!-- Announcements & Notices -->
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 20px;">
+              <h4 style="margin-bottom: 12px; color: var(--gov-navy);">
+                Official Institutional Notices
+              </h4>
+              <div id="dash-announcements-ticker">
+                <!-- Injected via js/student.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2: Attendance Check-In / Check-Out (Section 4.4) -->
+          <div class="portal-view-pane" id="pane-attendance">
+            <div id="student-attendance-content">
+              <!-- Injected via js/student.js -->
+            </div>
+          </div>
+
+          <!-- Pane 3: Fee Management & Submission (Section 4.3) -->
+          <div class="portal-view-pane" id="pane-fees">
+            <div id="student-fees-content">
+              <!-- Injected via js/student.js -->
+            </div>
+          </div>
+
+          <!-- Pane 4: My Course & Syllabus (Section 3.3) -->
+          <div class="portal-view-pane" id="pane-courses">
+            <div id="student-courses-content">
+              <!-- Injected via js/student.js -->
+            </div>
+          </div>
+
+          <!-- Pane 5: Study Notes & Question Papers (Section 4.5) -->
+          <div class="portal-view-pane" id="pane-notes">
+            <div id="student-notes-list">
+              <!-- Injected via js/student.js -->
+            </div>
+          </div>
+
+          <!-- Pane 6: Examination Center (Section 4.6) -->
+          <div class="portal-view-pane" id="pane-exams">
+            <div id="student-exams-list">
+              <!-- Injected via js/student.js -->
+            </div>
+          </div>
+
+          <!-- Pane 6.1: Active Examination Interface -->
+          <div class="portal-view-pane" id="pane-exam-taking">
+            <div class="exam-taking-wrapper">
+              <div class="exam-header-bar" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 16px;">
+                <div>
+                  <h3 id="exam-active-title" style="font-size: 1.15rem; color: var(--gov-navy);">Assessment Title</h3>
+                  <div style="display: flex; gap: 8px; margin-top: 4px;">
+                    <span class="badge badge-secondary" id="exam-q-counter">Question 1 of 5</span>
+                    <span class="badge badge-primary" id="exam-marks-badge">5 Marks</span>
+                  </div>
+                </div>
+
+                <div class="exam-clock" style="font-family: var(--font-mono); font-size: 1.2rem; font-weight: bold; color: var(--accent-rose); border: 1px solid var(--accent-rose); padding: 4px 10px; background: #fff;">
+                  <span>TIME REMAINING: </span>
+                  <span id="exam-live-clock">20:00</span>
+                </div>
+              </div>
+
+              <div class="exam-body-grid">
+                <div class="question-card" id="exam-question-card">
+                  <div id="exam-question-body">
+                    <!-- Injected via js/student.js -->
+                  </div>
+
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 14px;">
+                    <button class="btn btn-secondary btn-sm" id="btn-exam-prev">
+                      Previous Question
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="btn-exam-next">
+                      Save &amp; Next Question
+                    </button>
+                  </div>
+                </div>
+
+                <div class="question-palette-box">
+                  <h4 style="font-size: 0.85rem; margin-bottom: 8px; color: var(--gov-navy);">Question Navigator</h4>
+                  <div class="palette-grid" id="exam-palette-grid">
+                    <!-- Injected via js/student.js -->
+                  </div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;">
+                    <div><span style="color: var(--accent-emerald);">■</span> Green: Answered</div>
+                    <div><span style="color: var(--gov-navy);">■</span> Border: Current Question</div>
+                    <div><span style="color: var(--text-muted);">■</span> White: Unanswered</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 7: Results & Scorecards (Section 4.6) -->
+          <div class="portal-view-pane" id="pane-results">
+            <div id="student-results-table">
+              <!-- Injected via js/student.js -->
+            </div>
+          </div>
+
+          <!-- Pane 8: Digital Student ID (Section 4.2) -->
+          <div class="portal-view-pane" id="pane-idcard">
+            <div id="student-idcard-content">
+              <!-- Injected via js/student.js -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Student Portal Developer Footer -->
+        <div style="margin-top: 24px; padding: 14px 20px; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: var(--text-secondary); box-shadow: var(--shadow-sm);">
+          <div>
+            Portal Architecture &amp; System Entirely Developed by <strong style="color: var(--gov-navy);">Aditya Kaushik</strong>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+            <span style="color: var(--text-muted);">Developer Contact:</span>
+            <a href="mailto:scarfaceatwork@outlook.com" style="color: var(--gov-blue); font-weight: 600; text-decoration: none;">scarfaceatwork@outlook.com</a>
+            <span style="color: var(--border-color);">•</span>
+            <a href="mailto:Kaushikaditya5555@gmail.com" style="color: var(--gov-blue); font-weight: 600; text-decoration: none;">Kaushikaditya5555@gmail.com</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       ENVIRONMENT 3: TEACHER & ADMIN MANAGEMENT CONSOLE (Section 5, 6, 7)
+  ============================================================ -->
+  <main id="admin-view" style="display: none;">
+    <div class="container admin-wrapper">
+
+      <!-- Login View -->
+      <div id="admin-auth-view" class="portal-auth-card">
+        <div class="portal-auth-header">
+          <div class="portal-auth-icon" style="background: transparent; border: none; box-shadow: none; width: auto; height: auto; margin-bottom: 12px;">
+            <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 70px; height: 70px; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 14px rgba(0,34,68,0.22);" />
+          </div>
+          <h2 style="color: var(--gov-navy); border-bottom: none;">Staff &amp; Faculty Console</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Dedicated management workspace for Course Faculty and Central Administrators • Center Code: UP-438
+          </p>
+        </div>
+
+        <form id="admin-login-form">
+          <div class="form-group" style="text-align: left;">
+            <label class="form-label">Authorized Staff Email</label>
+            <input type="text" id="admin-login-user" class="form-control" placeholder="e.g. admin@sauryacomputer.edu" required />
+          </div>
+          <div class="form-group" style="text-align: left;">
+            <label class="form-label">Password</label>
+            <div class="password-input-wrapper">
+              <input type="password" id="admin-login-pass" class="form-control" placeholder="••••••••" required />
+              <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" data-target="admin-login-pass">👁️</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+            Authorize Console Access
+          </button>
+        </form>
+
+        <div class="demo-credentials-box">
+          <strong>⚡ Authorized Demo Staff Accounts:</strong><br>
+          Administrator: <code>admin@sauryacomputer.edu</code> / <code>admin123</code><br>
+          Faculty Member: <code>priya@sauryacomputer.edu</code> / <code>teacher123</code><br>
+          <div style="display: flex; gap: 6px; margin-top: 8px;">
+            <button class="btn btn-secondary btn-sm" id="btn-demo-admin-login" style="flex: 1;">
+              Auto-Fill Administrator
+            </button>
+            <button class="btn btn-outline btn-sm" id="btn-demo-teacher-login" style="flex: 1;">
+              Auto-Fill Teacher
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Authenticated Management Layout -->
+      <div id="admin-main-layout" style="display: none;">
+        <!-- Top Strip -->
+        <div class="admin-header-strip">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 44px; height: 44px; object-fit: contain; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0;" />
+            <div class="admin-user-badge">
+              <img src="assets/images/director.jpg" id="admin-user-avatar" class="admin-avatar" alt="Staff Profile" />
+              <div>
+                <h3 id="admin-header-name" style="font-size: 1.05rem; margin: 0; color: var(--gov-navy);">Staff Name</h3>
+                <small id="admin-header-role" style="color: var(--gov-orange); font-weight: 700; text-transform: uppercase;">Role Designation</small>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <button class="btn btn-secondary btn-sm" id="btn-admin-logout" style="color: var(--accent-rose);">
+              Sign Out
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="admin-tabs-nav" id="admin-tabs-nav">
+          <!-- Dynamically generated based on role via js/admin.js -->
+        </div>
+
+        <!-- Tab 1: Dashboard Overview (Section 5.1 & 6.1) -->
+        <div class="admin-pane active" id="admin-pane-dashboard">
+          <div class="kpi-grid" id="admin-kpi-container">
+            <!-- Injected via js/admin.js -->
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;" class="admin-dash-subgrid">
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 3px solid var(--gov-navy); padding: 20px;">
+              <h4 style="color: var(--gov-navy); margin-bottom: 12px;">Recent Admission Applications</h4>
+              <div id="dash-recent-apps">
+                <!-- Injected via js/admin.js -->
+              </div>
+            </div>
+
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 3px solid var(--gov-orange); padding: 20px;">
+              <h4 style="color: var(--gov-navy); margin-bottom: 12px;">Today's Attendance Status Summary</h4>
+              <div id="dash-recent-attendance">
+                <!-- Injected via js/admin.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Admission Application Queue (Section 6.4) -->
+        <div class="admin-pane" id="admin-pane-applications">
+          <div class="table-toolbar">
+            <h3 style="color: var(--gov-navy); margin: 0;">Admission Applications Queue</h3>
+            <input type="text" class="form-control table-search-input" id="search-applications" placeholder="Search applicant name, course, phone..." />
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-applications">
+              <thead>
+                <tr>
+                  <th>Ref ID</th>
+                  <th>Applicant Name</th>
+                  <th>Program Selected</th>
+                  <th>Academic Qualification</th>
+                  <th>Submission Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-apps-tbody">
+                <!-- Injected via js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 3: Student Management & CRUD (Section 6.5) -->
+        <div class="admin-pane" id="admin-pane-students">
+          <div class="table-toolbar">
+            <h3 style="color: var(--gov-navy); margin: 0;">Enrolled Student Master Directory</h3>
+            <div style="display: flex; gap: 10px;">
+              <input type="text" class="form-control table-search-input" id="search-students" placeholder="Search by Student ID, name..." />
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-students">
+              <thead>
+                <tr>
+                  <th>Student ID &amp; Name</th>
+                  <th>Course &amp; Batch</th>
+                  <th>Contact Phone</th>
+                  <th>Attendance %</th>
+                  <th>Fee Obligation</th>
+                  <th>Administrative Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-students-tbody">
+                <!-- Injected via js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 4: Course Management (Section 6.3) -->
+        <div class="admin-pane" id="admin-pane-courses">
+          <div class="table-toolbar">
+            <h3 style="color: var(--gov-navy); margin: 0;">Academic Programs &amp; Catalog</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-courses-admin">
+              <thead>
+                <tr>
+                  <th>Course Name</th>
+                  <th>Category</th>
+                  <th>Duration &amp; Hours</th>
+                  <th>Tuition Fee</th>
+                  <th>Available Batches</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-courses-tbody">
+                <!-- Injected via js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 5: Fee Administration (Section 6.6) -->
+        <div class="admin-pane" id="admin-pane-fees">
+          <div class="table-toolbar">
+            <h3 style="color: var(--gov-navy); margin: 0;">Fee Obligations &amp; Transaction Ledger</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-fees-admin">
+              <thead>
+                <tr>
+                  <th>Student ID</th>
+                  <th>Student Name</th>
+                  <th>Enrolled Course</th>
+                  <th>Total Fee</th>
+                  <th>Amount Paid</th>
+                  <th>Balance Due</th>
+                  <th>Counter Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-fees-tbody">
+                <!-- Injected via js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 6: Attendance Monitoring (Section 5.5, 6.7) -->
+        <div class="admin-pane" id="admin-pane-attendance">
+          <div class="table-toolbar">
+            <h3 style="color: var(--gov-navy); margin: 0;">Daily Attendance &amp; Timecard Verification</h3>
+            <div style="display: flex; gap: 10px;">
+              <button class="btn btn-secondary btn-sm" onclick="adminPanel.exportAttendanceReport()">
+                Export Attendance Log
+              </button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-attendance-admin">
+              <thead>
+                <tr>
+                  <th>Student ID</th>
+                  <th>Name</th>
+                  <th>Batch</th>
+                  <th>Check-In Time</th>
+                  <th>Check-Out Time</th>
+                  <th>Status</th>
+                  <th>Correction Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-attendance-tbody">
+                <!-- Injected via js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 7: Examination Assessment Center (Section 5.3, 6.8) -->
+        <div class="admin-pane" id="admin-pane-exams">
+          <div id="admin-exams-list">
+            <!-- Injected via js/admin.js -->
+          </div>
+        </div>
+
+        <!-- Tab 8: Descriptive Answer Grading (Section 5.6) -->
+        <div class="admin-pane" id="admin-pane-grading">
+          <div class="table-toolbar">
+            <h3 style="color: var(--gov-navy); margin: 0;">Pending Descriptive Answer Paper Evaluation</h3>
+          </div>
+          <div id="admin-grading-container">
+            <!-- Injected via js/admin.js -->
+          </div>
+        </div>
+
+        <!-- Tab 9: Learning Materials & Question Papers (Section 5.4) -->
+        <div class="admin-pane" id="admin-pane-notes">
+          <div id="admin-notes-content">
+            <!-- Injected via js/admin.js -->
+          </div>
+        </div>
+
+        <!-- Tab 10: Administrative Management Terminal (Section 7) -->
+        <div class="admin-pane" id="admin-pane-terminal">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-top: 3px solid var(--gov-navy); padding: 18px; margin-bottom: 14px;">
+            <h4 style="color: var(--gov-navy); margin-bottom: 4px;">Application-Level Administrative Console (Section 7 PRD)</h4>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+              Strict allowlist command interpreter. Shell execution, operating system access, and arbitrary SQL are securely blocked.
+            </p>
+          </div>
+          <div id="admin-terminal-container">
+            <!-- Injected via js/admin.js -->
+          </div>
+        </div>
+
+        <!-- Tab 11: Security & Operations Audit Logs (Section 6.10) -->
+        <div class="admin-pane" id="admin-pane-audit">
+          <div class="table-toolbar">
+            <h3 style="color: var(--gov-navy); margin: 0;">Security &amp; Operational Audit Ledger</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Actor (User)</th>
+                  <th>Action Executed</th>
+                  <th>Operational Details</th>
+                </tr>
+              </thead>
+              <tbody id="admin-audit-tbody">
+                <!-- Injected via js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Admin Console Developer Footer -->
+        <div style="margin-top: 24px; padding: 14px 20px; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: var(--text-secondary); box-shadow: var(--shadow-sm);">
+          <div>
+            System Architecture &amp; Management Console Entirely Developed by <strong style="color: var(--gov-navy);">Aditya Kaushik</strong>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+            <span style="color: var(--text-muted);">Developer Contact:</span>
+            <a href="mailto:scarfaceatwork@outlook.com" style="color: var(--gov-blue); font-weight: 600; text-decoration: none;">scarfaceatwork@outlook.com</a>
+            <span style="color: var(--border-color);">•</span>
+            <a href="mailto:Kaushikaditya5555@gmail.com" style="color: var(--gov-blue); font-weight: 600; text-decoration: none;">Kaushikaditya5555@gmail.com</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       MODALS: SYLLABUS, ADMISSION, PAYMENT & UPLOAD
+  ============================================================ -->
+
+  <!-- Modal 1: Course Syllabus Timeline Modal -->
+  <div class="modal-overlay" id="syllabus-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('syllabus-modal')">✕</button>
+      <h3 id="syllabus-modal-title" style="color: var(--gov-navy); margin-bottom: 10px;">Course Curriculum</h3>
+      <div id="syllabus-modal-meta"></div>
+      <h4 style="font-size: 0.95rem; color: var(--gov-navy); margin: 16px 0 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 4px;">
+        Curriculum Module Schedule
+      </h4>
+      <div id="syllabus-modal-timeline" class="syllabus-timeline"></div>
+      <div style="margin-top: 24px; text-align: right;">
+        <button class="btn btn-secondary btn-sm" onclick="closeModal('syllabus-modal')">Close</button>
+        <button class="btn btn-primary btn-sm" id="syllabus-apply-btn">Apply for this Program</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Admission Application Modal -->
+  <div class="modal-overlay" id="apply-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('apply-modal')">✕</button>
+      <h3 style="color: var(--gov-navy); margin-bottom: 4px;">Candidate Admission Application Form</h3>
+      <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 18px;">
+        Fill in your legal details to register for the academic session 2026-27.
+      </p>
+
+      <form id="apply-form">
+        <div class="form-group">
+          <label class="form-label">Full Name of Applicant</label>
+          <input type="text" id="apply-name" class="form-control" placeholder="Candidate's legal name" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div class="form-group">
+            <label class="form-label">Contact Phone</label>
+            <input type="tel" id="apply-phone" class="form-control" placeholder="10-digit mobile number" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" id="apply-email" class="form-control" placeholder="name@domain.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Selected Course of Study</label>
+          <select id="apply-course" class="form-control" required>
+            <!-- Injected via js/app.js -->
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div class="form-group">
+            <label class="form-label">Highest Academic Qualification</label>
+            <select id="apply-qualification" class="form-control">
+              <option>10th Standard / Matriculation</option>
+              <option>10+2 / Intermediate</option>
+              <option>Graduation / Bachelor's</option>
+              <option>Post Graduation / Master's</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Preferred Batch Timing</label>
+            <select id="apply-batch" class="form-control">
+              <option>Morning (08:00 AM – 10:00 AM)</option>
+              <option>Mid-day (11:00 AM – 01:00 PM)</option>
+              <option>Afternoon (02:00 PM – 04:00 PM)</option>
+              <option>Evening (05:00 PM – 07:00 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal('apply-modal')">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm">Submit Official Application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Payment Gateway Simulation Modal -->
+  <div class="modal-overlay" id="student-payment-modal">
+    <div class="modal-card" style="max-width: 480px;">
+      <button class="modal-close-btn" onclick="closeModal('student-payment-modal')">✕</button>
+      <h3 style="color: var(--gov-navy); margin-bottom: 4px;">Institutional Fee Gateway</h3>
+      <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 16px;">
+        Encrypted Indian Payment Processing (UPI / Card / Net Banking)
+      </p>
+
+      <div style="background: var(--bg-alt); padding: 14px; border: 1px solid var(--border-color); margin-bottom: 16px;">
+        <div id="pay-balance-help" style="font-weight: 700; color: var(--gov-navy); margin-bottom: 8px;">
+          Total pending balance: ₹0
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">
+          All transactions are cryptographically signed and recorded directly into the student fee ledger.
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Payment Amount (₹)</label>
+        <input type="number" id="pay-amount-input" class="form-control" placeholder="Enter amount to pay" min="100" step="100" required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Select Payment Method</label>
+        <select id="pay-method-select" class="form-control">
+          <option value="UPI (Google Pay / PhonePe / Paytm)">BHIM UPI (Google Pay / PhonePe / Paytm)</option>
+          <option value="Debit / Credit Card (RuPay / Visa)">Debit / Credit Card (RuPay / Visa / MasterCard)</option>
+          <option value="Net Banking (SBI / HDFC / ICICI)">Net Banking (SBI / HDFC / ICICI / PNB)</option>
+          <option value="Cash Counter Slip (Verified)">Cash Counter Slip (Office Verified)</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="studentPortal.processOnlinePayment()" style="width: 100%; margin-top: 12px;">
+        Authorize Fee Transaction
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal 4: Study Note & Document Reader Modal -->
+  <div class="modal-overlay" id="note-reader-modal">
+    <div class="modal-card" style="max-width: 760px;">
+      <button class="modal-close-btn" onclick="closeModal('note-reader-modal')">✕</button>
+      <h3 id="note-reader-title" style="color: var(--gov-navy); margin-bottom: 4px;">Document Reader</h3>
+      <p id="note-reader-meta" style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px;"></p>
+      <div id="note-reader-content" class="doc-reader-body" style="white-space: pre-wrap; font-family: inherit; font-size: 0.9rem; line-height: 1.6; background: var(--bg-surface); padding: 16px; border: 1px solid var(--border-color); max-height: 400px; overflow-y: auto;"></div>
+      <div style="margin-top: 16px; text-align: right;">
+        <button class="btn btn-secondary btn-sm" onclick="closeModal('note-reader-modal')">Close Reader</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Assessment Scorecard Modal -->
+  <div class="modal-overlay" id="scorecard-modal">
+    <div class="modal-card" style="max-width: 720px;">
+      <button class="modal-close-btn" onclick="closeModal('scorecard-modal')">✕</button>
+      <div id="scorecard-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Modal 6: Upload Study Material Modal -->
+  <div class="modal-overlay" id="modal-upload-note">
+    <div class="modal-card" style="max-width: 600px;">
+      <button class="modal-close-btn" onclick="closeModal('modal-upload-note')">✕</button>
+      <h3 style="color: var(--gov-navy); margin-bottom: 4px;">Upload Study Material</h3>
+      <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 16px;">
+        Publish verified notes and handouts to enrolled student portals.
+      </p>
+
+      <form id="form-upload-note" onsubmit="event.preventDefault(); adminPanel.handleNoteUploadSubmit(event);">
+        <div class="form-group">
+          <label class="form-label">Material Title</label>
+          <input type="text" id="note-upload-title" class="form-control" placeholder="e.g. Chapter 4: Financial Accounting with Tally" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Target Program / Course</label>
+            <select id="note-upload-course" class="form-control" required>
+              <option value="doap">DOAP (Code R20111)</option>
+              <option value="adca">ADCA (Code R20118)</option>
+              <option value="dca">DCA (Code R10104)</option>
+              <option value="dcaa">DCAA (Code R10203)</option>
+              <option value="tally-gst">Tally Prime with GST (Code R10607)</option>
+              <option value="ccoai">CCOAI / CCC (Code R10102)</option>
+              <option value="python">Python Programming (Code R10621)</option>
+              <option value="dtp">DTP (Code R10101)</option>
+              <option value="pgdca">PGDCA (Code R30105)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <input type="text" id="note-upload-subject" class="form-control" placeholder="e.g. Accounting Principles" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Target Batch Slot</label>
+          <select id="note-upload-batch" class="form-control">
+            <option value="All Batches">All Batches</option>
+            <option value="Morning Batch">Morning Batch</option>
+            <option value="Evening Batch">Evening Batch</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Summary / Description</label>
+          <input type="text" id="note-upload-summary" class="form-control" placeholder="Brief outline of contents" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Study Notes Text / Content Preview</label>
+          <textarea id="note-upload-preview" class="form-control" rows="5" placeholder="Enter key study concepts, formulas, or assignment guidelines..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal('modal-upload-note')">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm">Publish Material</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: RGCSM 50-Course Master Catalog Directory (Official Prospectus Index) -->
+  <div class="modal-overlay" id="rgcsm-index-modal">
+    <div class="modal-card rgcsm-modal-card" style="max-width: 920px; max-height: 90vh; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--gov-navy); padding-bottom: 12px; margin-bottom: 14px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="badge badge-amber" style="font-weight: 800;">RGCSM Master Index</span>
+            <span class="badge badge-primary">50 Approved Programs</span>
+            <span class="badge badge-secondary">Affiliated: Khair Centre</span>
+          </div>
+          <h3 style="color: var(--gov-navy); margin: 6px 0 2px; font-size: 1.25rem;">
+            Rajeev Gandhi Computer Saksharta Mission — Approved Courses Index
+          </h3>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            Official 50-course curriculum registered under C.R. Act of Ministry of HRD, Govt. of India.
+          </p>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('rgcsm-index-modal')">✕</button>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+        <input
+          type="text"
+          id="rgcsm-search-input"
+          class="form-control"
+          placeholder="Search by course code (e.g. R20111) or course name..."
+          style="flex: 1; min-width: 220px;"
+          oninput="renderRgcsmIndexTable(document.getElementById('rgcsm-cat-filter')?.value, this.value)"
+        />
+        <select
+          id="rgcsm-cat-filter"
+          class="form-control"
+          style="width: 200px;"
+          onchange="renderRgcsmIndexTable(this.value, document.getElementById('rgcsm-search-input')?.value)"
+        >
+          <option value="all">All Categories</option>
+          <option value="Diploma">Diploma Courses</option>
+          <option value="Advance Diploma">Advance Diplomas</option>
+          <option value="Certificate">Certificate Courses</option>
+          <option value="Professional">Professional / Vocational</option>
+          <option value="Post Graduate">Post Graduate (PG)</option>
+          <option value="Teacher Training">Teacher Training (NTT/DCTT)</option>
+        </select>
+      </div>
+
+      <div class="table-responsive" style="flex: 1; overflow-y: auto; max-height: 460px; border: 1px solid var(--border-color); border-radius: 4px;">
+        <table class="data-table" style="margin: 0; width: 100%;">
+          <thead style="position: sticky; top: 0; background: var(--bg-alt); z-index: 2;">
+            <tr>
+              <th style="width: 50px;">S.No</th>
+              <th style="width: 120px;">Course Code</th>
+              <th>Official Course Name</th>
+              <th style="width: 150px;">Category</th>
+              <th style="width: 110px;">Duration</th>
+            </tr>
+          </thead>
+          <tbody id="rgcsm-index-tbody">
+            <!-- Dynamically populated via renderRgcsmIndexTable() in js/app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 10px;">
+        <div style="font-size: 0.78rem; color: var(--text-muted);">
+          * Diplomas valid for registration in Employment Exchanges all over India. Verification available on <a href="https://rgcsm.org" target="_blank" rel="noopener noreferrer" style="color: var(--gov-navy); font-weight: 700;">www.rgcsm.org</a>.
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-secondary btn-sm" onclick="closeModal('rgcsm-index-modal')">Close Directory</button>
+          <button class="btn btn-primary btn-sm" onclick="closeModal('rgcsm-index-modal'); openApplyModal();">Apply for Admission</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FLOATING QUICK-SWITCH WORKSPACE DOCK (EASILY SWITCHABLE FROM ANYWHERE ON PAGE)
+  ============================================================ -->
+  <aside class="floating-switch-dock" id="floating-switch-dock" aria-label="Quick Workspace Switcher">
+    <div class="dock-container">
+      <div class="dock-brand-tag">
+        <span class="dock-live-dot"></span>
+        <span class="dock-tag-label">PORTALS</span>
+      </div>
+      <div class="dock-buttons-group">
+        <button type="button" class="dock-pill-btn active" data-view="public" title="Switch to Public Informational Website">
+          <span class="dock-pill-icon">🌐</span>
+          <span class="dock-pill-text">Public Website</span>
+        </button>
+        <button type="button" class="dock-pill-btn" data-view="student" title="Switch to Student Portal (Attendance, Online Exams & Fees)">
+          <span class="dock-pill-icon">🎓</span>
+          <span class="dock-pill-text">Student Portal</span>
+        </button>
+        <button type="button" class="dock-pill-btn" data-view="admin" title="Switch to Staff, Faculty & Teacher Console">
+          <span class="dock-pill-icon">🏛️</span>
+          <span class="dock-pill-text">Staff &amp; Teacher</span>
+        </button>
+      </div>
+      <button type="button" class="dock-toggle-btn" id="btn-dock-toggle" title="Minimize or Expand Dock" aria-label="Minimize Switcher Dock">−</button>
+    </div>
+  </aside>
+
+  <!-- Floating Back to Top Button -->
+  <button id="btn-back-to-top" aria-label="Back to Top" title="Back to Top">↑</button>
+
+  <!-- Modal 7: Interactive Command Palette (Ctrl+K) -->
+  <div class="modal-overlay" id="command-palette-modal">
+    <div class="command-palette-card">
+      <div class="cmd-search-header">
+        <span class="cmd-search-icon">🔍</span>
+        <input type="text" id="cmd-palette-input" class="cmd-search-input" placeholder="Type a command or search courses, links, pages..." autocomplete="off" />
+        <kbd class="cmd-kbd-badge">Esc</kbd>
+      </div>
+      <ul class="cmd-results-list" id="cmd-palette-results">
+        <!-- Rendered dynamically via js/app.js -->
+      </ul>
+      <div class="cmd-footer">
+        <div><span>Navigate</span> <kbd class="cmd-kbd-badge">↑</kbd> <kbd class="cmd-kbd-badge">↓</kbd> &nbsp; <span>Select</span> <kbd class="cmd-kbd-badge">Enter</kbd></div>
+        <div><span>Saurya Computer Education • Dev: Aditya Kaushik</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="js/data.js?v=5.1"></script>
+  <script src="js/store.js?v=5.1"></script>
+  <script src="js/mascot.js?v=5.1"></script>
+  <script src="js/student.js?v=5.1"></script>
+  <script src="js/admin.js?v=5.1"></script>
+  <script src="js/app.js?v=5.1"></script>
+</body>
+</html>
