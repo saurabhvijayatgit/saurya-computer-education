@@ -369,29 +369,29 @@ a:hover {
 .gov-masthead {
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
-  padding: 16px 0;
+  padding: 20px 0;
 }
 
 .gov-masthead-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
 }
 
 .gov-brand-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .gov-emblem-seal {
-  width: 76px;
-  height: 76px;
+  width: 115px;
+  height: 115px;
   flex-shrink: 0;
   object-fit: contain;
   border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(0, 34, 68, 0.18);
+  box-shadow: 0 6px 20px rgba(0, 34, 68, 0.22);
   transition: transform var(--transition-normal);
 }
 
@@ -400,7 +400,7 @@ a:hover {
 }
 
 [data-theme="dark"] .gov-emblem-seal {
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.3);
 }
 
 .gov-brand-titles {
@@ -409,7 +409,7 @@ a:hover {
 }
 
 .gov-title-hindi {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--gov-navy);
   letter-spacing: 0.02em;
@@ -421,7 +421,7 @@ a:hover {
 }
 
 .gov-title-english {
-  font-size: 1.45rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--gov-navy);
   letter-spacing: 0.03em;
@@ -433,10 +433,11 @@ a:hover {
 }
 
 .gov-subtitle-legal {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   font-weight: 500;
-  margin-top: 3px;
+  margin-top: 4px;
+  line-height: 1.4;
 }
 
 [data-theme="dark"] .gov-subtitle-legal {
@@ -452,11 +453,11 @@ a:hover {
 .gov-accreditation-box {
   text-align: right;
   border-left: 2px solid var(--border-color);
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .gov-accreditation-title {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--gov-navy);
   text-transform: uppercase;
@@ -468,10 +469,10 @@ a:hover {
 }
 
 .gov-accreditation-desc {
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
-  line-height: 1.4;
-  margin-top: 2px;
+  line-height: 1.45;
+  margin-top: 3px;
 }
 
 [data-theme="dark"] .gov-accreditation-desc {
@@ -480,8 +481,8 @@ a:hover {
 
 .gov-ashoka-symbol,
 .gov-affiliation-logo {
-  width: 72px;
-  height: 72px;
+  width: 115px;
+  height: 115px;
   object-fit: contain;
   flex-shrink: 0;
   transition: transform var(--transition-normal);

@@ -816,7 +816,7 @@ class StudentPortal {
       <div class="printable-area" style="padding: 10px;">
         <div style="text-align: center; border-bottom: 2px solid var(--border-color); padding-bottom: 14px; margin-bottom: 18px;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 8px;">
-            <img src="assets/images/logo.png?v=6.0" alt="Saurya Logo" style="width: 56px; height: 56px; object-fit: contain; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.1); flex-shrink: 0;" />
+            <img src="assets/images/logo.png?v=6.1" alt="Saurya Logo" style="width: 72px; height: 72px; object-fit: contain; border-radius: 50%; box-shadow: 0 3px 10px rgba(0,0,0,0.15); flex-shrink: 0;" />
             <div style="flex: 1;">
               <div style="font-size: 0.72rem; color: #d97706; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;">Rajeev Gandhi Computer Saksharta Mission (RGCSM)</div>
               <h2 style="font-size: 1.35rem; color: var(--gov-navy); margin: 2px 0;">SAURYA COMPUTER EDUCATION</h2>
@@ -827,7 +827,7 @@ class StudentPortal {
                 RGCSM Enrolment: ${student.rgcsmEnrollmentNo || 'RGCSM-UP-KHR-2026-0142'} • Franchise / Centre Code: UP-438
               </div>
             </div>
-            <img src="assets/images/rgcsm-logo.png" alt="RGCSM Logo" style="width: 56px; height: 56px; object-fit: contain; flex-shrink: 0;" />
+            <img src="assets/images/rgcsm-logo.png?v=6.1" alt="RGCSM Logo" style="width: 72px; height: 72px; object-fit: contain; flex-shrink: 0;" />
           </div>
         </div>
 
@@ -878,14 +878,14 @@ class StudentPortal {
         <div class="student-pvc-card printable-area">
           <div class="id-card-header">
             <div style="display: flex; align-items: center; gap: 8px;">
-              <img src="assets/images/logo.png?v=6.0" alt="Saurya Logo" style="width: 38px; height: 38px; object-fit: contain; border-radius: 50%; background: #ffffff; padding: 1px; flex-shrink: 0;" />
+              <img src="assets/images/logo.png?v=6.1" alt="Saurya Logo" style="width: 44px; height: 44px; object-fit: contain; border-radius: 50%; background: #ffffff; padding: 1px; flex-shrink: 0;" />
               <div class="id-brand">
                 <span style="font-size: 0.62rem; color: #f59e0b; display: block; font-weight: 800; letter-spacing: 0.06em;">RAJEEV GANDHI COMPUTER SAKSHARTA MISSION</span>
                 SAURYA COMPUTER EDUCATION (KHAIR)
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 6px;">
-              <img src="assets/images/rgcsm-logo.png" alt="RGCSM Logo" style="width: 32px; height: 32px; object-fit: contain; flex-shrink: 0;" />
+              <img src="assets/images/rgcsm-logo.png?v=6.1" alt="RGCSM Logo" style="width: 40px; height: 40px; object-fit: contain; flex-shrink: 0;" />
               <div style="font-size: 0.68rem; background: rgba(56, 189, 248, 0.2); padding: 3px 6px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4); text-align: center; white-space: nowrap;">
                 PASS • <span style="color: #f59e0b; font-weight: 700;">UP-438</span>
               </div>
