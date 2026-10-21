@@ -129,10 +129,6 @@
   ============================================================ -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="#hero-section" class="nav-brand-anchor" title="Saurya Computer Education (Khair)" style="display: flex; align-items: center; gap: 8px; text-decoration: none; padding-right: 6px; flex-shrink: 0;">
-        <img src="assets/images/logo.png" alt="Saurya Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 50%; background: #ffffff; padding: 1px; box-shadow: 0 2px 6px rgba(0,0,0,0.25);" />
-        <span style="font-weight: 800; font-size: 0.88rem; color: #ffffff; letter-spacing: 0.04em; white-space: nowrap;" class="hide-mobile">SAURYA</span>
-      </a>
       <ul class="nav-menu" id="main-nav-menu">
         <li><a href="#hero-section" class="nav-link active">Home</a></li>
         <li><a href="#about-section" class="nav-link">About Center</a></li>
@@ -154,12 +150,8 @@
         </button>
       </div>
 
-      <!-- Action Area: Quick Search, Portals Access Dropdown & Online Apply -->
+      <!-- Action Area: Portals Access Dropdown & Online Apply -->
       <div class="nav-actions">
-        <button type="button" class="nav-search-btn" id="btn-open-cmd" onclick="openCommandPalette()" title="Press Ctrl+K to search">
-          <span>🔍</span> <span class="hide-mobile">Search</span> <kbd class="cmd-kbd-badge">Ctrl K</kbd>
-        </button>
-
         <!-- Compact Portals Access Dropdown (Replaces cramped pills) -->
         <div class="portals-dropdown-wrap" id="portals-dropdown-wrap">
           <button type="button" class="btn-portals-trigger" id="btn-portals-trigger" onclick="togglePortalsDropdown(event)" aria-haspopup="true" aria-expanded="false" title="Switch to Student, Teacher or Admin Workspace">
@@ -1828,33 +1820,6 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       FLOATING QUICK-SWITCH WORKSPACE DOCK (EASILY SWITCHABLE FROM ANYWHERE ON PAGE)
-  ============================================================ -->
-  <aside class="floating-switch-dock" id="floating-switch-dock" aria-label="Quick Workspace Switcher">
-    <div class="dock-container">
-      <div class="dock-brand-tag">
-        <span class="dock-live-dot"></span>
-        <span class="dock-tag-label">PORTALS</span>
-      </div>
-      <div class="dock-buttons-group">
-        <button type="button" class="dock-pill-btn active" data-view="public" title="Switch to Public Informational Website">
-          <span class="dock-pill-icon">🌐</span>
-          <span class="dock-pill-text">Public Website</span>
-        </button>
-        <button type="button" class="dock-pill-btn" data-view="student" title="Switch to Student Portal (Attendance, Online Exams & Fees)">
-          <span class="dock-pill-icon">🎓</span>
-          <span class="dock-pill-text">Student Portal</span>
-        </button>
-        <button type="button" class="dock-pill-btn" data-view="admin" title="Switch to Staff, Faculty & Teacher Console">
-          <span class="dock-pill-icon">🏛️</span>
-          <span class="dock-pill-text">Staff &amp; Teacher</span>
-        </button>
-      </div>
-      <button type="button" class="dock-toggle-btn" id="btn-dock-toggle" title="Minimize or Expand Dock" aria-label="Minimize Switcher Dock">−</button>
-    </div>
-  </aside>
-
   <!-- Floating Back to Top Button -->
   <button id="btn-back-to-top" aria-label="Back to Top" title="Back to Top">↑</button>
 
@@ -1877,11 +1842,11 @@
   </div>
 
   <!-- Core Scripts -->
-  <script src="js/data.js?v=5.1"></script>
-  <script src="js/store.js?v=5.1"></script>
-  <script src="js/mascot.js?v=5.1"></script>
-  <script src="js/student.js?v=5.1"></script>
-  <script src="js/admin.js?v=5.1"></script>
-  <script src="js/app.js?v=5.1"></script>
+  <script src="js/data.js?v=5.2"></script>
+  <script src="js/store.js?v=5.2"></script>
+  <script src="js/mascot.js?v=5.2"></script>
+  <script src="js/student.js?v=5.2"></script>
+  <script src="js/admin.js?v=5.2"></script>
+  <script src="js/app.js?v=5.2"></script>
 </body>
 </html>
